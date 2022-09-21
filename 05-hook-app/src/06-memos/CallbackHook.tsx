@@ -4,14 +4,9 @@ import {ShowIncrement} from './ShowIncrement';
 export const CallbackHook = () => {
 	const [counter, setCounter] = useState(10);
 
-	const incrementFather = useCallback(() => {
-		setCounter((value) => value + 1);
+	const incrementFather = useCallback((value2Increment: number) => {
+		setCounter((counter_local) => counter_local + value2Increment);
 	}, []);
-
-	// Se debe usar el memo para evitar un ciclo infinito
-	useEffect(() => {
-		incrementFather();
-	}, [incrementFather]);
 
 	return (
 		<>

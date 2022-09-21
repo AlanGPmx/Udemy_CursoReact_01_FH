@@ -6,7 +6,9 @@ export const ShowIncrement = memo((props: any) => {
 	console.log('ShowIncrement: He sido generado');
 
 	return (
-		<button className='btn btn-success text-center' onClick={() => increment()}>
+		<button
+			className='btn btn-success text-center'
+			onClick={() => increment(100)}>
 			+1
 		</button>
 	);
