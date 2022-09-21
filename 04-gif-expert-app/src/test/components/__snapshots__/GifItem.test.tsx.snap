@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Evaluando el componente GifItem Deberá renderizar el componente y compararlo con el Snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Club América"
+      src="https://media.giphy.com/media/3o7TKsQ8U5h3iXWgZK/giphy.gif"
+    />
+    <p>
+      Club América
+    </p>
+  </div>
+</div>
+`;

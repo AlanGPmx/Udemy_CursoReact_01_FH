@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <AddCategory /> Deberá renderizar el componente y compararlo con el Snapshot 1`] = `
+<div>
+  <form
+    aria-label="form"
+  >
+    <input
+      placeholder="Busca un GIF..."
+      type="text"
+      value=""
+    />
+  </form>
+</div>
+`;
