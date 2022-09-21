@@ -14,6 +14,7 @@ import {Layout} from './05-useLayoutEffect/Layout';
 import {Memorize} from './06-memos/Memorize';
 import {MemoHook} from './06-memos/MemoHook';
 import {CallbackHook} from './06-memos/CallbackHook';
+import {Padre} from './07-tarea-memo/Padre';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -23,6 +24,13 @@ root.render(
 		<div className='row'>
 			<div className='col-12'>
 				<HooksApp />
+			</div>
+
+			<div className='col-md-6'>
+				<Padre />
+			</div>
+			<div className='col-12'>
+				<Separador />
 			</div>
 			<div className='col-md-6'>
 				<CallbackHook />
