@@ -1,4 +1,6 @@
-export const Hijo = (props: any) => {
+import {memo} from 'react';
+
+export const Hijo = memo((props: any) => {
 	const {numero, incrementar} = props;
 
 	console.log('  Me volví a generar :(  ');
@@ -10,4 +12,4 @@ export const Hijo = (props: any) => {
 			{numero}
 		</button>
 	);
-};
+});
