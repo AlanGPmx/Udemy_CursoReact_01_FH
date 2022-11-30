@@ -15,7 +15,7 @@ export const Padre = () => {
 
 	return (
 		<div>
-			<h1>Padre</h1>
+			<h2 className='text-center mb-5'>10.-Padre</h2>
 			<p> Total: {valor} </p>
 
 			<hr />

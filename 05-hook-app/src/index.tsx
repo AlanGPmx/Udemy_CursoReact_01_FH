@@ -17,6 +17,7 @@ import {CallbackHook} from './06-memos/CallbackHook';
 import {Padre} from './07-tarea-memo/Padre';
 
 import './08-useReducer/intro-reducer';
+import {TodoApp} from './08-useReducer/TodoApp';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -28,6 +29,9 @@ root.render(
 				<HooksApp />
 			</div>
 
+			<div className='col-md-6'>
+				<TodoApp />
+			</div>
 			<div className='col-md-6'>
 				<Padre />
 			</div>
