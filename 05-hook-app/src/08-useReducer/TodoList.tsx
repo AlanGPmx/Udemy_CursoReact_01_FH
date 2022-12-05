@@ -7,7 +7,7 @@ export const TodoList = (props: any) => {
 		<>
 			<ul className='list-group'>
 				{todos.map((todo: any) => (
-					<TodoItem key={todo.id} />
+					<TodoItem key={todo.id} todo={todo} />
 				))}
 			</ul>
 		</>

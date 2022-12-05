@@ -50,18 +50,14 @@ root.render(
 			<div className='col-md-6'>
 				<Memorize />
 			</div>
-			<div className='col-md-6'>
-				<Layout />
-			</div>
+			<div className='col-md-6'>{/* <Layout /> */}</div>
 			<div className='col-12'>
 				<Separador />
 			</div>
 			<div className='col-md-6'>
 				<FocusScreen />
 			</div>
-			<div className='col-md-6'>
-				<MultipleCustomHooks />
-			</div>
+			<div className='col-md-6'>{/* <MultipleCustomHooks /> */}</div>
 			<div className='col-12'>
 				<Separador />
 			</div>
