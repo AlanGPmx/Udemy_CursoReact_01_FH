@@ -27,8 +27,17 @@ export const todoReducer = (
 		case '[TODO] add todo':
 			return [...state, action.payload];
 
-		case '[TODO] edit todo':
-			break;
+		case '[TODO] update todo':
+			return state.map((todo) => {
+				if (todo.id === action.payload) {
+					return {
+						id: todo.id,
+						description: todo.description,
+						done: !todo.done,
+					};
+				}
+				return todo;
+			});
 
 		case '[TODO] delete todo':
 			return state.filter((state) => state.id !== action.payload);
@@ -36,6 +45,4 @@ export const todoReducer = (
 		default:
 			return state;
 	}
-
-	return state;
 };

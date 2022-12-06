@@ -8,11 +8,13 @@ export const TodoItem = (props: any) => {
 	const {
 		todo: {description, done, id},
 		onDeleteTodo,
+		onToggleTodo,
 	} = props;
 
 	return (
 		<>
 			<li
+				onDoubleClick={() => onToggleTodo(id)}
 				className={`list-group-item d-flex justify-content-between ${
 					done ? 'list-group-item-success' : 'list-group-item-warning'
 				} `}>
@@ -22,7 +24,10 @@ export const TodoItem = (props: any) => {
 						size='xs'
 						className={`${done ? 'text-success' : 'text-warning'} `}
 					/>{' '}
-					{description}
+					<span
+						className={`${done ? 'text-decoration-line-through' : 'fw-bold'} `}>
+						{description}
+					</span>
 				</span>
 				<button
 					className='btn btn-danger btn-sm'
