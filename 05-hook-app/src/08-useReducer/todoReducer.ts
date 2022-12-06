@@ -16,20 +16,26 @@ export interface TodoInterface {
 }
 /** FIN DE INTERFACES */
 
-/** DATOS INICIALES */
-const initialState: TodoInterface[] = [];
-
-const actionInitial: ActionsInterface = {type: '', payload: ''};
-
 /** INICIO DE LA LÓGICA DEL PROGRAMA */
 export const todoReducer = (
-	args: TodosInterface = {state: initialState, action: actionInitial}
+	state: TodoInterface[],
+	action: ActionsInterface
 ): TodoInterface[] => {
-	const {state, action} = args;
 	console.log(state);
 
-	if (action?.type === '[TODO] add todo') {
-		return [...state, action.payload];
+	switch (action?.type) {
+		case '[TODO] add todo':
+			return [...state, action.payload];
+
+		case '[TODO] edit todo':
+			break;
+
+		case '[TODO] delete todo':
+			break;
+
+		default:
+			return state;
 	}
+
 	return state;
 };

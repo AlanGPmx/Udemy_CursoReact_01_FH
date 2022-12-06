@@ -1,5 +1,10 @@
 import {useReducer} from 'react';
-import {TodoInterface, todoReducer} from './todoReducer';
+import {
+	ActionsInterface,
+	TodoInterface,
+	todoReducer,
+	TodosInterface,
+} from './todoReducer';
 import {TodoList} from './TodoList';
 import {TodoAdd} from './TodoAdd';
 
@@ -12,15 +17,20 @@ export const TodoApp = () => {
 		},
 		{
 			id: 2,
-			description: 'Empezar el curso de React',
+			description: 'Empezar el curso de React1',
 			done: false,
 		},
 	];
 
-	const [state, dispatch] = useReducer<any>(todoReducer, initialState);
+	const [state, dispatch] = useReducer(todoReducer, initialState);
 
-	const handleNewTodo = (todo: any) => {
-		console.log(todo);
+	const handleNewTodo = (todo: TodoInterface) => {
+		const action: ActionsInterface = {
+			type: '[TODO] add todo',
+			payload: todo,
+		};
+
+		dispatch(action);
 	};
 
 	return (
