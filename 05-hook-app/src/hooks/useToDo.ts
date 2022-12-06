@@ -42,5 +42,16 @@ export const useToDo = (initialState: TodoInterface[]) => {
 
 		dispatch(action);
 	};
-	return {state, handleNewTodo, handleDeleteTodo, handleToggleTodo};
+
+	const pendingTodosCount = state.filter((todo) => !todo.done).length;
+	const allTodosCount = state.filter((todo) => !todo.done).length;
+
+	return {
+		state,
+		allTodosCount,
+		pendingTodosCount,
+		handleNewTodo,
+		handleDeleteTodo,
+		handleToggleTodo,
+	};
 };

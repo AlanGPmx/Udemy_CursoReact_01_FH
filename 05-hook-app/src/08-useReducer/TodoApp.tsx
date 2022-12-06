@@ -3,16 +3,21 @@ import {TodoAdd} from './TodoAdd';
 import {useToDo} from '../hooks/useToDo';
 
 export const TodoApp = () => {
-	const {state, handleNewTodo, handleDeleteTodo, handleToggleTodo} = useToDo(
-		[]
-	);
+	const {
+		state,
+		pendingTodosCount,
+		allTodosCount,
+		handleNewTodo,
+		handleDeleteTodo,
+		handleToggleTodo,
+	} = useToDo([]);
 
 	return (
 		<>
 			<span className='text-center mb-5'>
-				<h2>11.-Todo App (1)</h2>
+				<h2>11.-Todo App ({allTodosCount})</h2>
 				<h6>
-					<small className='text-center'>Pendientes: 0</small>
+					<small className='text-center'>Pendientes: {pendingTodosCount}</small>
 				</h6>
 			</span>
 			<hr />
