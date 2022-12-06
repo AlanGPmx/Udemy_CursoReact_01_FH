@@ -31,7 +31,7 @@ export const todoReducer = (
 			break;
 
 		case '[TODO] delete todo':
-			break;
+			return state.filter((state) => state.id !== action.payload);
 
 		default:
 			return state;

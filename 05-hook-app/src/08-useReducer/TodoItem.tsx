@@ -6,7 +6,8 @@ import {
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 export const TodoItem = (props: any) => {
 	const {
-		todo: {description, done},
+		todo: {description, done, id},
+		onDeleteTodo,
 	} = props;
 
 	return (
@@ -23,7 +24,9 @@ export const TodoItem = (props: any) => {
 					/>{' '}
 					{description}
 				</span>
-				<button className='btn btn-danger btn-sm'>
+				<button
+					className='btn btn-danger btn-sm'
+					onClick={() => onDeleteTodo(id)}>
 					<FontAwesomeIcon icon={faTrashCan} size='xs' />
 				</button>
 			</li>
