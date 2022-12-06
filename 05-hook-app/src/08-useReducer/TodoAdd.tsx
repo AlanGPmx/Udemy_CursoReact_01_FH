@@ -38,10 +38,10 @@ export const TodoAdd = (props: any) => {
 					onChange={onInputChange}
 				/>
 
-				<div className='d-grid gap-2 d-md-block'>
+				<div className='d-grid gap-2 d-block'>
 					<button
 						type='submit'
-						className='btn mx-auto w-50 btn-outline-primary'>
+						className='btn btn-sm mx-auto w-50 mt-3 btn-outline-primary'>
 						Agregar
 					</button>
 				</div>
