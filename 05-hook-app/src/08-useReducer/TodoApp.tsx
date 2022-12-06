@@ -13,7 +13,7 @@ export const TodoApp = () => {
 		{
 			id: 1,
 			description: 'Comprar el curso de React',
-			done: false,
+			done: true,
 		},
 		{
 			id: 2,
