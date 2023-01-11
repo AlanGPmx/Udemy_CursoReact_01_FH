@@ -1,6 +1,8 @@
 import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {BrowserRouter} from 'react-router-dom';
+
 import {HooksApp} from './HooksApp';
 import reportWebVitals from './reportWebVitals';
 import {CounterApp} from './01-useState/CounterApp';
@@ -18,17 +20,33 @@ import {Padre} from './07-tarea-memo/Padre';
 
 import './08-useReducer/intro-reducer';
 import {TodoApp} from './08-useReducer/TodoApp';
+import {MainApp} from './09-useContext/MainApp';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
 );
 root.render(
-	<React.StrictMode>
+	<BrowserRouter>
+		<React.StrictMode>
+			{/**
+			 *                             SECCIÓN:
+			 *                               09-useContext
+			 **/}
+			<div className='row'>
+				<div className='col-12'>
+					<MainApp />
+				</div>
+			</div>
+			{/**
+			 *                             SECCIÓN:
+			 *                                01-useState, 02-useEffect, 03-examples, 04-useRef, 05-useLayoutEffect, 06-memos, 07-tarea-memo, 08-useReducer
+			 **/}
+
+			{/*
 		<div className='row'>
 			<div className='col-12'>
 				<HooksApp />
 			</div>
-
 			<div className='col-md-6'>
 				<TodoApp />
 			</div>
@@ -50,14 +68,14 @@ root.render(
 			<div className='col-md-6'>
 				<Memorize />
 			</div>
-			<div className='col-md-6'>{/* <Layout /> */}</div>
+			<div className='col-md-6'>{<Layout />}</div>
 			<div className='col-12'>
 				<Separador />
 			</div>
 			<div className='col-md-6'>
 				<FocusScreen />
 			</div>
-			<div className='col-md-6'>{/* <MultipleCustomHooks /> */}</div>
+			<div className='col-md-6'>{<MultipleCustomHooks />}</div>
 			<div className='col-12'>
 				<Separador />
 			</div>
@@ -77,7 +95,9 @@ root.render(
 				<CounterApp />
 			</div>
 		</div>
-	</React.StrictMode>
+		*/}
+		</React.StrictMode>
+	</BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
