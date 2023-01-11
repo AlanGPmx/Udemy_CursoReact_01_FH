@@ -5,7 +5,7 @@ export const useCounter = (initialState = 0) => {
 
 	const incrementCounter = (value = 1) => {
 		value = value < 1 ? -value : value;
-		setCounter(counter + value);
+		setCounter((current) => current + value);
 	};
 
 	const resetCounter = () => {
@@ -14,7 +14,7 @@ export const useCounter = (initialState = 0) => {
 
 	const decrementCounter = (value = -1) => {
 		value = value <= 0 ? -value : value;
-		setCounter(counter - value);
+		setCounter((current) => current - value);
 	};
 
 	return {counter, incrementCounter, decrementCounter, resetCounter};
