@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <MultipleCustomHooks /> Debe mostrar el componente por defecto con snapshot 1`] = `
+<div>
+  <h2
+    class="text-center mb-5"
+  >
+    5.- Breaking Bad Quotes
+  </h2>
+  <div
+    class="alert alert-info text-center"
+  >
+    Cargando...
+  </div>
+  <button
+    class="btn btn-primary float-end"
+    disabled=""
+  >
+    Siguiente frase...
+  </button>
+</div>
+`;
