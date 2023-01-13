@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 
-export const useFetch = (url: string) => {
+export const useFetch: any = (url: string) => {
 	const [state, setState] = useState({
 		data: null,
 		isLoading: true,
